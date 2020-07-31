@@ -1,0 +1,2 @@
+# WordPress News Theme
+
