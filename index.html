@@ -2,131 +2,271 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
 
-    <!--ios compatibility-->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Strict">
-    <link rel="apple-touch-icon" href="apple-icon-144x144.png">
+	<!--ios compatibility-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="Strict">
+	<link rel="apple-touch-icon" href="apple-icon-144x144.png">
 
-    <!--Android compatibility-->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Strict">
-    <link rel="icon" type="image/png" href="android-icon-192x192.png">
+	<!--Android compatibility-->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Strict">
+	<link rel="icon" type="image/png" href="android-icon-192x192.png">
 
-    <title>Wordpress news theme</title>
+	<title>Wordpress news theme</title>
 
-    <!-- SASS file -->
-    <link rel="stylesheet" href="css/theme.css">
+	<!-- owl carousle css files -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- SASS file -->
+	<link rel="stylesheet" href="css/theme.css">
+
+
 
 </head>
 
 <body>
 
-    <!-- header start -->
-    <header class="header">
-        <div class="container">
+	<!-- header start -->
+	<header class="header">
+		<div class="container">
 
-            <!-- top header start -->
-            <div class="top-header">
-                <a class="top-logo" href="index.html">
-                    <img src="img/logo/logo_01.png" alt="">
-                </a>
-            </div><!-- top header end -->
+			<!-- top header start -->
+			<div class="top-header">
+				<a class="top-logo" href="index.html">
+					<img src="img/logo/logo_01.png" alt="">
+				</a>
+			</div><!-- top header end -->
 
-            <!-- bottom header start -->
-            <div class="bottom-header">
+			<!-- bottom header start -->
+			<div class="bottom-header">
 
-                <!-- hem manu -->
-                <div class="ham-menu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+				<!-- hem manu -->
+				<div class="ham-menu">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 
-                <!-- bottom header logo -->
-                <div class="bottom-logo">
-                    <a href="#">
-                        <img src="img/logo/logo_01.png" alt="">
-                    </a>
-                </div>
+				<!-- bottom header logo -->
+				<div class="bottom-logo">
+					<a href="#">
+						<img src="img/logo/logo_01.png" alt="">
+					</a>
+				</div>
 
-                <!-- header navigation start -->
-                <nav class="header-nav">
-                    <div class="header-nav-close">
-                        <a href="#" class="fas fa-times"></a>
-                    </div>
-                    <ul class="top-menu">
-                        <li class="active"><a href="#">novi broj</a></li>
-                        <li>
-                            <a href="#">arhitektura</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="#">dizajn</a>
-                                    <ul class="sub-menu-two">
-                                        <li>
-                                            <a href="#">podovi</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Prozori&Vrata</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">bašta</a></li>
-                        <li><a href="#">dečja soba</a></li>
-                        <li><a href="#">dnevni boravak</a></li>
-                        <li><a href="#">kuhinja</a></li>
-                        <li><a href="#">kupatilo</a></li>
-                    </ul>
-                    <nav class="header-nav-social">
-                        <ul>
-                            <li><a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
-                            <li><a href="https://www.facebook.com" class="fab fa-facebook-f"></a></li>
-                            <li><a href="https://www.twitter.com" class="fab fa-twitter"></a></li>
-                        </ul>
-                    </nav>
-                </nav><!-- header navigation end -->
+				<!-- header navigation start -->
+				<nav class="header-nav">
+					<div class="header-nav-close">
+						<a href="#" class="fas fa-times"></a>
+					</div>
+					<ul class="top-menu">
+						<li class="active"><a href="#">novi broj</a></li>
+						<li>
+							<a href="#">
+								<span>arhitektura</span>
+								<!-- span se prikazuje samo u slucaju da top-menu li sadrzi sub-menu -->
+								<span class="fas fa-chevron-down toggle-submenu"></span>
+							</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">
+										<span>dizajn</span>
+										<!-- span se prikazuje samo u slucaju da top-menu li sadrzi sub-menu -->
+										<span class="fas fa-chevron-down toggle-submenu"></span>
+									</a>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">podovi</a>
+										</li>
+										<li>
+											<a href="#">Prozori&Vrata</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">bašta</a></li>
+						<li><a href="#">dečja soba</a></li>
+						<li><a href="#">dnevni boravak</a></li>
+						<li><a href="#">kuhinja</a></li>
+						<li><a href="#">kupatilo</a></li>
+					</ul>
+					<nav class="header-nav-social">
+						<ul>
+							<li><a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
+							<li><a href="https://www.facebook.com" class="fab fa-facebook-f"></a></li>
+							<li><a href="https://www.twitter.com" class="fab fa-twitter"></a></li>
+						</ul>
+					</nav>
+				</nav><!-- header navigation end -->
 
-                <div class="header-search-social">
-                    <!-- header search form start -->
-                    <div class="header-search">
-                        <a href="#" class="fas fa-search header-search-icon"></a>
-                        <form method="GET" action="#" class="header-search-input">
-                            <input type="search" name="header-search" value="" placeholder="Search...">
-                            <button type="submit" class="fas fa-search"></button>
-                        </form>
-                    </div><!-- header search form end -->
-    
-                    <!-- header social nav start -->
-                    <nav class="social-nav">
-                        <ul>
-                            <li><a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
-                            <li><a href="https://www.facebook.com" class="fab fa-facebook-f"></a></li>
-                            <li><a href="https://www.twitter.com" class="fab fa-twitter"></a></li>
-                        </ul>
-                    </nav><!-- header social nav end -->
-                </div>
+				<div class="header-search-social">
+					<!-- header search form start -->
+					<div class="header-search">
+						<a href="#" class="fas fa-search header-search-icon"></a>
+						<form method="GET" action="#" class="header-search-input">
+							<input type="search" name="header-search" value="" placeholder="Search...">
+							<button type="submit" class="fas fa-search"></button>
+						</form>
+					</div><!-- header search form end -->
 
-            </div><!-- bottom header end -->
-        </div>
-    </header><!-- header end -->
+					<!-- header social nav start -->
+					<nav class="social-nav">
+						<ul>
+							<li><a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
+							<li><a href="https://www.facebook.com" class="fab fa-facebook-f"></a></li>
+							<li><a href="https://www.twitter.com" class="fab fa-twitter"></a></li>
+						</ul>
+					</nav><!-- header social nav end -->
+				</div>
+
+			</div><!-- bottom header end -->
+		</div>
+	</header><!-- header end -->
 
 
+	<main>
+		<!-- home carousel start -->
+		<section class="hero">
+			<div class="container">
+				<div class="slider-wrapper">
+					<div class="hero-slider owl-carousel">
+						<!-- .slider-item start-->
+						<article class="news-item">
+							<a href="#" class="news-item-image">
+								<img src="img/home-carousel/home-carousel-01.png" alt="" srcset="img/home-carousel/home-carousel-01.png">
+							</a>
+							<div class="news-item-data">
+								<h2 class="news-item-title">
+									<a href="#">
+										Moderni povratak u pedesete: Calligaris predstavllja fotelju Coco
+									</a>
+								</h2>
+								<div class="news-item-meta">
+									<span class="news-item-published">28.06.2020.</span>
+									<span class="separator"></span>
+									<a href="#" class="news-item-category">Enterijer</a>
+								</div>
+								<p class="news-item-description">
+									„Moda prolazi, stil ostaje“. Ove poznate reči koje je izgovorila Mademoaselle Coco ostavile su neizbrisiv trag u istoriji mode.
+								</p>
+								<a class="btn btn-primary text-uppercase read-more" href="#">pročitaj još</a>
+							</div>
+						</article><!-- .slider-item end-->
+						<!-- .slider-item start-->
+						<article class="news-item">
+							<a href="#" class="news-item-image">
+								<img src="img/home-carousel/home-carousel-01.png" alt="" srcset="img/home-carousel/home-carousel-01.png">
+							</a>
+							<div class="news-item-data">
+								<h2 class="news-item-title">
+									<a href="#">
+										Moderni povratak u pedesete: Calligaris predstavllja fotelju Coco
+									</a>
+								</h2>
+								<div class="news-item-meta">
+									<span class="news-item-published">28.06.2020.</span>
+									<span class="separator"></span>
+									<a href="#" class="news-item-category">Enterijer</a>
+								</div>
+								<p class="news-item-description">
+									„Moda prolazi, stil ostaje“. Ove poznate reči koje je izgovorila Mademoaselle Coco ostavile su neizbrisiv trag u istoriji mode.
+								</p>
+								<a class="btn btn-primary text-uppercase read-more" href="#">pročitaj još</a>
+							</div>
+						</article><!-- .slider-item end-->
+						<!-- .slider-item start-->
+						<article class="news-item">
+							<a href="#" class="news-item-image">
+								<img src="img/home-carousel/home-carousel-01.png" alt="" srcset="img/home-carousel/home-carousel-01.png">
+							</a>
+							<div class="news-item-data">
+								<h2 class="news-item-title">
+									<a href="#">
+										Moderni povratak u pedesete: Calligaris predstavllja fotelju Coco
+									</a>
+								</h2>
+								<div class="news-item-meta">
+									<span class="news-item-published">28.06.2020.</span>
+									<span class="separator"></span>
+									<a href="#" class="news-item-category">Enterijer</a>
+								</div>
+								<p class="news-item-description">
+									„Moda prolazi, stil ostaje“. Ove poznate reči koje je izgovorila Mademoaselle Coco ostavile su neizbrisiv trag u istoriji mode.
+								</p>
+								<a class="btn btn-primary text-uppercase read-more" href="#">pročitaj još</a>
+							</div>
+						</article><!-- .slider-item end-->
+						<!-- .slider-item start-->
+						<article class="news-item">
+							<a href="#" class="news-item-image">
+								<img src="img/home-carousel/home-carousel-01.png" alt="" srcset="img/home-carousel/home-carousel-01.png">
+							</a>
+							<div class="news-item-data">
+								<h2 class="news-item-title">
+									<a href="#">
+										Moderni povratak u pedesete: Calligaris predstavllja fotelju Coco
+									</a>
+								</h2>
+								<div class="news-item-meta">
+									<span class="news-item-published">28.06.2020.</span>
+									<span class="separator"></span>
+									<a href="#" class="news-item-category">Enterijer</a>
+								</div>
+								<p class="news-item-description">
+									„Moda prolazi, stil ostaje“. Ove poznate reči koje je izgovorila Mademoaselle Coco ostavile su neizbrisiv trag u istoriji mode.
+								</p>
+								<a class="btn btn-primary text-uppercase read-more" href="#">pročitaj još</a>
+							</div>
+						</article><!-- .slider-item end-->
+						<!-- .slider-item start-->
+						<article class="news-item">
+							<a href="#" class="news-item-image">
+								<img src="img/home-carousel/home-carousel-01.png" alt="" srcset="img/home-carousel/home-carousel-01.png">
+							</a>
+							<div class="news-item-data">
+								<h2 class="news-item-title">
+									<a href="#">
+										Moderni povratak u pedesete: Calligaris predstavllja fotelju Coco
+									</a>
+								</h2>
+								<div class="news-item-meta">
+									<span class="news-item-published">28.06.2020.</span>
+									<span class="separator"></span>
+									<a href="#" class="news-item-category">Enterijer</a>
+								</div>
+								<p class="news-item-description">
+									„Moda prolazi, stil ostaje“. Ove poznate reči koje je izgovorila Mademoaselle Coco ostavile su neizbrisiv trag u istoriji mode.
+								</p>
+								<a class="btn btn-primary text-uppercase read-more" href="#">pročitaj još</a>
+							</div>
+						</article><!-- .slider-item end-->
+						
+					</div>
+				</div>
+			</div>
+		</section><!-- home carousel end -->
+	</main>
 
-    <!-- jQuery -->
-    <script src="js/jQuery.js"></script>
 
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/1ac1d1bd1b.js" crossorigin="anonymous"></script>
+	<!-- jQuery -->
+	<script src="js/jQuery.js"></script>
 
-    <!-- JS script -->
-    <script src="js/script.js"></script>
+	<!-- owl carousel js files -->
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/1ac1d1bd1b.js" crossorigin="anonymous"></script>
+
+	<!-- JS script -->
+	<script src="js/script.js"></script>
 
 </body>
 
