@@ -13,17 +13,7 @@
    .news-item-image {
       margin-bottom: 2.7rem;
 
-      img {
-         // position: absolute;
-         // object-fit: cover;
-         // top: 0;
-         // left: 0;
-         // width: 100%;
-         // min-height: 100%;
-         // max-width: none;
-         // display: block;
-         // transition: 0.6s linear;
-      }
+      
    }
 
    .news-item-data {
@@ -99,6 +89,7 @@
 
    .owl-carousel button.owl-dot.active {
       background-color: $search-btn;
+      border: 1px solid $search-btn;
    }
 
 
