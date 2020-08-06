@@ -4,7 +4,8 @@ $(document).ready(() => {
    // search input hide / show on click
    /////////////////////////////////////
 
-   $('.header-search-icon').on('click', () => {
+   $('.header-search-icon').on('click', (e) => {
+      e.preventDefault();
       if ($('.header-search-input').height() == 0) {
          $('.header-search-icon').addClass('header-search-icon-close')
          $('.header-search-input').css({
@@ -113,6 +114,7 @@ $(document).ready(() => {
 
    $(window).on('resize scroll', () => {
       containerWidth = $('.container').outerWidth();
+      // bottomHeaderPos = $('.bottom-header').offset().top;
    })
 
    $(window).on("scroll resize", () => {
@@ -125,13 +127,19 @@ $(document).ready(() => {
             $('.top-header').css('display', 'none');
             $('main').css('margin-top', '180px');
          } else {
-            $('.bottom-header').css('position', 'relative');
+            $('.bottom-header').css({
+               'position': 'relative',
+               'width': 'auto'
+            });
             $('.top-header').css('display', 'block');
             $('main').css('margin-top', '10px');
          }
       } else {
          $('.top-header').css('display', 'none');
-         $('.bottom-header').css('width', 'auto');
+         $('.bottom-header').css({
+            'width': 'auto',
+            'position': 'relative'
+         });
          $('main').css('margin-top', '60px');
       }
    })
@@ -143,5 +151,10 @@ $(document).ready(() => {
 
    $(".owl-carousel").owlCarousel({
       'items' : 1,
+      'loop': true,
+      'autoplay': true,
+      'autoplayTimeout': 8000,
+      'autoplayHoverPause': true,
+
    });
 })

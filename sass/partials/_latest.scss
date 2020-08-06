@@ -1,0 +1,199 @@
+.latest {
+   .section-header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 2.4rem;
+
+      .section-title {
+         @include text-fm(1.9rem, 2.3rem, 2.53px);
+         font-family: 'Lato';
+         font-weight: 900;
+         text-transform: uppercase;
+
+         .category-title {
+            color: $search-btn;
+            padding-bottom: 1.3rem;
+         }
+
+         .category-exo {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 3px;
+            width: 1.9rem;
+            background-color: $search-btn;
+         }
+      }
+   }
+
+   .row {
+      .main-content {
+         .news-item {
+
+            .news-item-image {
+               margin-bottom: 0;
+            }
+
+            .news-item-title {
+               font-family: 'Crimson Text';
+               font-weight: 600;
+               height: calc(2 * 3.6rem);
+            }
+
+            .news-item-description {
+               display: none;
+            }
+
+            .read-more {
+               display: none;
+            }
+         }
+      }
+
+      .sidebar {
+         padding: 2.5rem;
+
+         .printed-edition {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            background-color: $printed-bg;
+
+            &>* {
+               margin-bottom: 1.5rem;
+               text-transform: uppercase;
+            }
+
+            &>a:first-of-type {
+               top: -3.5rem;
+               position: relative;
+               margin-bottom: -2rem;
+            }
+
+            .printed-edition-no {
+               font-family: 'Lato';
+               font-weight: 900;
+               @include text-fm(1rem, 1.2rem, 0.83px);
+            }
+
+            .printed-edition-title {
+               font-family: 'Lato';
+               font-weight: bold;
+               @include text-fm(2rem, 2.4rem, 1.67px);
+
+            }
+         }
+         
+         .banner {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (min-width:992px) {
+   .latest {
+      .section-header {
+         .section-title {
+            @include text-fm(3rem, 3.6rem, 4px);
+
+            .category-exo {
+               height: 4px;
+               width: 3rem;
+            }
+         }
+      }
+
+      .row {
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+
+         .main-content {
+            .news-item {
+               text-align: center;
+               flex-flow: column nowrap;
+               margin-bottom: 4rem;
+
+               .news-item-image {
+                  order: 0;
+                  flex: 1;
+                  width: auto;
+               }
+
+               .news-item-data {
+                  display: flex;
+                  flex-flow: column nowrap;
+                  align-items: center;
+                  flex: 1;
+                  width: auto;
+
+                  .news-item-title {
+                     @include text-fm(2.8rem, 3.9rem);
+                     max-height: calc(2 * 3.9rem);
+
+                     a {
+                        transition: 0.3s ease;
+                     }
+                  }
+
+                  .news-item-description {
+                     display: block;
+                     @include text-fm(1.5rem, 2.2rem);
+                     max-height: calc(4 * 2.2rem);
+                     margin-bottom: 0;
+                  }
+               }
+
+               &:hover {
+                  .news-item-data {
+                     .news-item-title {
+                        a {
+                           color: $btn-primary;
+                        }
+                     }
+                  }
+               }
+            }
+
+            .news-wrapper {
+               display: flex;
+               flex-flow: row wrap;
+               align-items: flex-start;
+               justify-content: space-between;
+
+               &>* {
+                  flex: 0 0 48.5%;
+                  width: 48.5%;
+               }
+            }
+         }
+
+         .sidebar {
+            min-width: calc(300px + 2 * 2.5rem);
+
+            .printed-edition {
+               text-align: center;
+               padding-bottom: 2rem;
+
+               .printed-edition-no {
+                  font-family: 'Lato';
+                  font-weight: 900;
+               }
+
+               .printed-edition-title {
+                  font-family: 'Lato';
+                  font-weight: 900;
+                  @include text-fm(2.5rem, 3rem, 2.08px);
+               }
+            }
+
+            .banner {
+               display: block;
+            }
+         }
+      }
+   }
+}
