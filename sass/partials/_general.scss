@@ -1,16 +1,19 @@
+$body-font: 'Crimson Text';
+$paragraph-font: 'Lato';
+
 html {
     font-size: 10px;
 }
 
 body {
     font-size: 1.6rem;
-    font-family: 'Crimson Text';
+    font-family: $body-font;
     font-weight: 600;
     position: relative;
 }
 
 p {
-    font-family: 'Lato';
+    font-family: $paragraph-font;
 }
 
 body,
@@ -35,7 +38,7 @@ main {
 }
 
 .btn {
-    font-family: 'Lato';
+    font-family: $paragraph-font;
     font-weight: bold;
     padding: 1.3rem 1.9rem;
     text-transform: uppercase;
@@ -45,10 +48,10 @@ main {
 
 .btn-primary {
     color: $blank;
-    background-color: $btn-primary;
+    background-color: $search-btn;
 
     &:hover {
-        background-color: darken($btn-primary, 10%);
+        background-color: darken($search-btn, 10%);
     }
 }
 

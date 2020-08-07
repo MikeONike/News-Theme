@@ -1,3 +1,6 @@
+$header-nav-item: 'Lato';
+$search-iput: 'Roboto';
+
 .header {
    background-color: $blank;
    position: fixed;
@@ -111,7 +114,7 @@
          transition: 0.3s ease;
 
          li {
-            font-family: 'Lato';
+            font-family: $header-nav-item;
             font-weight: bold;
             @include text-fm(3.2rem, 3.8rem, 0.1px);
             text-transform: uppercase;
@@ -149,7 +152,7 @@
             @include text-fm(2.9rem, 3.8rem, 0.1px);
 
             a {
-               padding-left: 2rem;
+               padding-left: 2rem;  
             }
          }
 
@@ -216,7 +219,7 @@
          input {
             flex: 1;
             padding: 7px 1.4rem;
-            font-family: 'Roboto';
+            font-family: $search-iput;
             border: 1px solid $gray-one;
             border-right: none;
             border-top-left-radius: 5px;
@@ -356,6 +359,7 @@
          }
 
          .sub-menu {
+            border:none;
             top: 100%;
             left: 0;
             min-width: 110%;
@@ -371,6 +375,7 @@
                a {
                   padding: 1rem !important;
                   background-color: $blank;
+                  border:1px solid $search-border;
                }
 
                &:hover {
@@ -383,6 +388,9 @@
             .sub-menu {
                top: 10%;
                left: 100%;
+               a {
+                  border:1px solid $search-border;
+               }
             }
 
          }
