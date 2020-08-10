@@ -1,0 +1,21 @@
+main {
+   .banner .container {
+      text-align: center;
+
+      &>a {
+         display: inline-block;
+         margin-bottom: 1.5rem
+      }
+   }
+}
+
+@media (min-width:992px) {
+   main {
+      .banner .container {
+         &>a {
+            max-width: 992px;
+            height: auto;
+         }
+      }
+   }
+}

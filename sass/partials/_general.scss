@@ -68,12 +68,15 @@ main {
     background: rgba(#eee, 0.5);
     overflow: hidden;
     display: block;
+    width:100%;
+    flex: 0 0 100%;
 
     //ovo je namesteno da bude default 16:9
     &:before {
         content: '';
         display: block;
-        padding-top: 56.25%;
+        // padding-top: 56.25%;
+        padding-top: 75%;
 
     }
 

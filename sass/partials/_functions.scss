@@ -9,10 +9,10 @@
 //    line-height: #{$line-height}rem !important;
    overflow: hidden;
    @if($fixed){
-       height: #{$row * $line-height}rem;
-       max-height: none;
+       height: #{$row * $line-height}rem ;
+       max-height: none ;
    }@else{
-       max-height: #{$row * $line-height}rem;
-       height: auto;
+       max-height: #{$row * $line-height}rem ;
+       height: auto ;
    }    
 }

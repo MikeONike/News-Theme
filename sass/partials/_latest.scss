@@ -42,6 +42,7 @@ $news-item-font: 'Crimson Text';
          font-weight: 900;
          color: $printed-bg;
          z-index: 1;
+         white-space: nowrap;
          @include text-fm(4.1rem, 4.9rem, 6.31px);
       }
    }
@@ -75,6 +76,14 @@ $news-item-font: 'Crimson Text';
 
          .read-more {
             display: none;
+         }
+
+         &:hover {
+            .news-item-title {
+               a {
+                  color:$search-btn;
+               }
+            }
          }
       }
    }
