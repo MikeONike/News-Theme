@@ -1,7 +1,7 @@
 @mixin text-fm($fs, $lh, $ls: normal) {
-   font-size:$fs;
-   line-height: $lh;
-   letter-spacing: $ls;
+   font-size:$fs ;
+   line-height: $lh ;
+   letter-spacing: $ls ;
 }
 
 @mixin textRestriction($font-size, $line-height, $row, $fixed:false){

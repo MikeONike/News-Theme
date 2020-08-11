@@ -1,8 +1,9 @@
 $description-font: "Crimson Text";
 
 .four-news {
+   margin-bottom: 3.6rem;
    .section-header {
-      background-image: linear-gradient(rgba($void, 0.3), rgba($void, 0.3)), url('../../img/bg/bg_01.png');
+      background-image: linear-gradient(rgba($void, 0.3), rgba($void, 0.3)), url('../img/bg/bg_01.png');
       background-position: top center;
       background-size: cover;
       padding: 5rem 1rem;
@@ -73,9 +74,17 @@ $description-font: "Crimson Text";
 
 @media (min-width:768px) {
    .four-news {
+      margin-bottom: 4.6rem;
       .section-header {
          background-attachment: fixed;
          padding: 5rem 1rem 234px;
+
+         .section-description {
+            max-width:556px;
+            margin: 0 auto;
+            @include text-fm(2.4rem, 3.3rem);
+
+         }
       }
 
       .news-list {

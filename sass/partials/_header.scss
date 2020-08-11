@@ -6,6 +6,7 @@ $search-iput: 'Roboto';
    position: fixed;
    width: 100%;
    z-index: 10;
+   min-height: 67px;
    // .container {
    //    display: flex;
    //    flex-flow:column nowrap;
@@ -300,7 +301,6 @@ $search-iput: 'Roboto';
             li {
                @include text-fm(1.4rem, 2.5rem, 0.1px);
                position: relative;
-               width:100%;
 
                a {
                   position: relative;
@@ -337,6 +337,9 @@ $search-iput: 'Roboto';
                      opacity: 1;
                      visibility: visible;
                      top: 100%;
+                     li {
+                        width:100%;
+                     }
                   }
                }
             }
