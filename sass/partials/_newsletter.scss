@@ -6,6 +6,7 @@ $btn-font: 'Lato';
    background-image: linear-gradient(rgba($void, 0.3), rgba($void, 0.3)), url('../img/bg/bg_02.png');
    background-position: top center;
    background-size: cover;
+   margin-bottom:3.8rem;
 
    .section-header {
       margin-bottom: 3.4rem;
@@ -65,6 +66,7 @@ $btn-font: 'Lato';
       }
 
       button {
+         transition: 0.3s ease;
          min-width:167px;
          border-radius: 25px;
          padding:1.7rem 3.7rem;
@@ -79,6 +81,10 @@ $btn-font: 'Lato';
          &:focus {
             outline:none;
          }
+
+         &:hover {
+            background-color: darken($search-btn, 10%);
+        }
       }
    }
 

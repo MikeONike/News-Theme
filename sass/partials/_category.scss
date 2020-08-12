@@ -1,0 +1,161 @@
+$title-font: 'Lato';
+$news-item-title: "Crimson Text";
+
+.category {
+   .archive {
+      .news-wrapper {
+
+         display: flex;
+         flex-flow: row wrap;
+         align-items: flex-start;
+         justify-content: space-between;
+
+         .news-item {
+            flex: 0 0 100%;
+            width: 100%;
+         }
+      }
+
+   }
+
+   .sidebar {
+      display: block;
+      flex: 0 0 315px;
+      max-width: 315px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .most-read {
+         text-align:center;
+         background-color: $printed-bg;
+         padding:2.5rem;
+         .most-read-title {
+            font-family: $title-font;
+            font-weight: bold;
+            @include text-fm(2.5rem, 3rem, 1.5px);
+            position: relative;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            &::after {
+               content:'';
+               position: absolute;
+               display: block;
+               height:3px;
+               width:3rem;
+               background-color: $void;
+               top:100%;
+               left:50%;
+               transform: translateX(-50%);
+            }
+         }
+
+         .most-read-content {
+            .news-item {
+               .news-item-description {
+                  display:none;
+               }
+
+               .read-more {
+                  display: none;
+               }
+
+               .news-item-title {
+                  font-family: $news-item-title;
+                  font-weight: 600;
+                  @include text-fm(1.9rem, 2.6rem);
+                  @include textRestriction(1.9, 2.6, 2);
+                  transition: 0.3s ease;
+               }
+
+               .news-item-meta {
+                  @include text-fm(1.2rem, 1.7rem, 0.28px);
+                  @include textRestriction(1.2, 1.7, 2);
+               }
+
+               &:hover {
+                  .news-item-title {
+                     a {
+                        color:$search-btn;
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      .banner {
+         display: block;
+         margin-bottom: 0;
+      }
+
+   }
+
+}
+
+@media (min-width:450px) {
+   .category {
+      .archive {
+         .news-wrapper {
+
+            .news-item:nth-of-type(1n + 3) {
+
+               flex: 0 0 48.5%;
+               width: 48.5%;
+            }
+
+         }
+      }
+
+      .sidebar {
+         display: none;
+
+         .banner {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (min-width:576px) {
+   .category {
+      .archive {
+         .news-wrapper {
+
+            .news-item {
+               flex: 0 0 48.5%;
+               width: 48.5%;
+            }
+
+            .news-item:nth-of-type(1n + 3) {
+
+               flex: 0 0 31.5%;
+               width: 31.5%;
+            }
+
+         }
+      }
+
+      .sidebar {
+         display: none;
+         flex: 0 0 320px;
+         max-width: 320px;
+
+         .banner {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (min-width:992px) {
+   .category {
+      .sidebar {
+         display: block;
+         
+         .banner {
+            display: block;
+         }
+      }
+   }  
+}

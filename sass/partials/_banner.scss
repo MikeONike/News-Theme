@@ -1,20 +1,24 @@
 main {
-   .banner .container {
-      text-align: center;
+   .banner {
+      margin-bottom: 3rem ;
+      & .container {
+         text-align: center;
 
-      &>a {
-         display: inline-block;
-         margin-bottom: 1.5rem
+         &>a {
+            display: inline-block;
+         }
       }
    }
 }
 
 @media (min-width:992px) {
    main {
-      .banner .container {
-         &>a {
-            max-width: 992px;
-            height: auto;
+      .banner {
+         & .container {
+            &>a {
+               max-width: 992px;
+               height: auto;
+            }
          }
       }
    }
