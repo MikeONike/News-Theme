@@ -1,5 +1,6 @@
 $title-font: 'Lato';
 $news-item-title: "Crimson Text";
+$pagin-font: "Roboto";
 
 .category {
    .archive {
@@ -26,9 +27,10 @@ $news-item-title: "Crimson Text";
       margin-right: auto;
 
       .most-read {
-         text-align:center;
+         text-align: center;
          background-color: $printed-bg;
-         padding:2.5rem;
+         padding: 2.5rem;
+
          .most-read-title {
             font-family: $title-font;
             font-weight: bold;
@@ -37,15 +39,16 @@ $news-item-title: "Crimson Text";
             text-transform: uppercase;
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
+
             &::after {
-               content:'';
+               content: '';
                position: absolute;
                display: block;
-               height:3px;
-               width:3rem;
+               height: 3px;
+               width: 3rem;
                background-color: $void;
-               top:100%;
-               left:50%;
+               top: 100%;
+               left: 50%;
                transform: translateX(-50%);
             }
          }
@@ -53,7 +56,7 @@ $news-item-title: "Crimson Text";
          .most-read-content {
             .news-item {
                .news-item-description {
-                  display:none;
+                  display: none;
                }
 
                .read-more {
@@ -76,7 +79,7 @@ $news-item-title: "Crimson Text";
                &:hover {
                   .news-item-title {
                      a {
-                        color:$search-btn;
+                        color: $search-btn;
                      }
                   }
                }
@@ -89,6 +92,76 @@ $news-item-title: "Crimson Text";
          margin-bottom: 0;
       }
 
+
+   }
+
+   .pagination {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 6.5rem;
+
+      ul {
+         border: 0.5px solid $meta-data-color;
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: flex-end;
+         align-items: center;
+
+         .active {
+            a {
+               color: $blank;
+               background-color: $search-btn;
+            }
+         }
+
+         li {
+            font-family: $pagin-font;
+            font-weight: 500;
+            @include text-fm(1.4rem, 1.6rem);
+            border-right: 0.5px solid $meta-data-color;
+            min-width: 36px;
+            min-height: 36px;
+            text-align: center;
+            
+            a {
+               transition: 0.3s ease;
+               color: $void;
+               line-height: 3.6rem;
+            }
+
+            &:hover {
+               a {
+                  color: $blank;
+                  background-color: $search-btn;
+               }
+            }
+
+            &:first-of-type,
+            &:last-of-type {
+               a {
+                  color: $search-btn;
+                  transition: 0.3s ease;
+                  width: 100%;
+                  
+                  &::before {
+                     display:block;
+                     line-height: 36px;
+                  }
+
+                  &:hover {
+                     color: $blank;
+                     background-color: $search-btn;
+                  }
+               }
+            }
+
+            &:last-of-type {
+               border-right: none;
+            }
+         }
+      }
    }
 
 }
@@ -152,10 +225,10 @@ $news-item-title: "Crimson Text";
    .category {
       .sidebar {
          display: block;
-         
+
          .banner {
             display: block;
          }
       }
-   }  
+   }
 }
