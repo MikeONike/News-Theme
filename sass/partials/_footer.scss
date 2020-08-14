@@ -14,13 +14,17 @@ $copyright-font: "Lato";
          &>ul {
             column-count: 2;
 
+
             li {
                font-family: $copyright-font;
                font-weight: bold;
                @include text-fm(1.5rem, 2.5rem, 0.5px);
                text-transform: uppercase;
                page-break-inside: avoid;
+               -webkit-column-break-inside: avoid;
+               -webkit-backface-visibility: hidden;
                break-inside: avoid-column;
+               backface-visibility: hidden;
                display: table;
 
                a {
@@ -130,7 +134,7 @@ $copyright-font: "Lato";
          }
 
          .footer-menu {
-            display:flex;
+            display: flex;
             justify-content: center;
             align-items: flex-start;
             flex: 0 0 75%;

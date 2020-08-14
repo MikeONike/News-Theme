@@ -23,8 +23,9 @@ $pagin-font: "Roboto";
       display: block;
       flex: 0 0 315px;
       max-width: 315px;
-      margin-left: auto;
+      // margin-left: auto;
       margin-right: auto;
+      margin-left:2.5rem;
 
       .most-read {
          text-align: center;
@@ -103,7 +104,7 @@ $pagin-font: "Roboto";
       margin-bottom: 6.5rem;
 
       ul {
-         border: 0.5px solid $meta-data-color;
+         border: 0.5px solid $pagin-border;
          display: flex;
          flex-flow: row nowrap;
          justify-content: flex-end;
@@ -120,7 +121,7 @@ $pagin-font: "Roboto";
             font-family: $pagin-font;
             font-weight: 500;
             @include text-fm(1.4rem, 1.6rem);
-            border-right: 0.5px solid $meta-data-color;
+            border-right: 0.5px solid $pagin-border;
             min-width: 36px;
             min-height: 36px;
             text-align: center;
@@ -182,6 +183,7 @@ $pagin-font: "Roboto";
 
       .sidebar {
          display: none;
+         margin-left:0;
 
          .banner {
             display: none;
@@ -230,5 +232,15 @@ $pagin-font: "Roboto";
             display: block;
          }
       }
+
+      .banner {
+         a {
+            max-width: 992px;
+            height:auto;
+            margin:0 auto;
+         }
+      }
    }
+
+   
 }

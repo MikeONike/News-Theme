@@ -1,0 +1,1 @@
+1. set news-item-description max-height in category page.

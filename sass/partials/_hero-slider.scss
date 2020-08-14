@@ -1,7 +1,7 @@
    $title-font: 'Crimson Text';
    $meta-font: 'Roboto';
    $description-font: 'Lato';
-   
+
    .hero {
 
       margin-bottom: 2.6rem;
@@ -15,19 +15,17 @@
    }
 
    .news-item-image {
-      margin-bottom: 2.7rem;
-
-      
+      // margin-bottom: 2.7rem;
    }
 
    .news-item-data {
-      padding: 1rem 2rem;
+      padding: 0.5rem 1rem;
 
       .news-item-title {
          font-family: $title-font;
          font-weight: bold;
          @include text-fm(3rem, 3.6rem, 0.38px);
-         margin-bottom: 1.3rem;
+         margin-bottom: 0.5rem;
          overflow: hidden;
          max-height: calc(3 * 3.6rem);
 
@@ -44,7 +42,8 @@
          font-family: $meta-font;
          font-weight: 500;
          @include text-fm(1.4rem, 1.6rem, 0.35px);
-         margin-bottom: 1.3rem;
+         // margin-bottom: 1.3rem;
+         margin-bottom: 0;
 
          span,
          a {
@@ -100,40 +99,45 @@
 
    @media (min-width:768px) {
 
-.hero {
-
-
-      .news-item {
-         flex-flow: row nowrap;
-         text-align: left;
-      }
-
       .news-item-image {
-         margin-bottom: 0;
-         order: 1;
-         flex: 0 0 60%;
-         width: 60%
+         margin-bottom: 2.7rem;
       }
 
-      .news-item-data {
-         flex: 0 0 40%;
-         width: 40%;
+      .hero {
 
-         .news-item-title {
-            @include text-fm(4.2rem, 4.7rem, 0.53px);
-            max-height: calc(3 * 4.7rem);
+
+         .news-item {
+            flex-flow: row nowrap;
+            text-align: left;
          }
 
-         .news-item-description {
-            @include text-fm(1.9rem, 2.6rem, normal);
+         .news-item-image {
+            margin-bottom: 0;
+            order: 1;
+            flex: 0 0 60%;
+            width: 60%
          }
 
-         .news-item-meta {
-            justify-content: flex-start;
+         .news-item-data {
+            flex: 0 0 40%;
+            width: 40%;
+
+            .news-item-title {
+               @include text-fm(4.2rem, 4.7rem, 0.53px);
+               max-height: calc(3 * 4.7rem);
+            }
+
+            .news-item-description {
+               @include text-fm(1.9rem, 2.6rem, normal);
+            }
+
+            .news-item-meta {
+               justify-content: flex-start;
+               margin-bottom: 1.3rem;
+            }
          }
       }
    }
-}
 
 
    @media (min-width:992px) {

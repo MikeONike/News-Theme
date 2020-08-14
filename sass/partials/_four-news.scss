@@ -33,8 +33,10 @@ $description-font: "Crimson Text";
    }
 
    .news-list {
+      padding:0 1rem;
       .news-item {
          flex-flow: row;
+         margin-bottom: 1rem;
 
          .news-item-image {
             flex: 0 0 40%;
@@ -67,6 +69,35 @@ $description-font: "Crimson Text";
 
          .read-more {
             display: none;
+         }
+      }
+   }
+}
+
+@media (min-width:450px) {
+   .four-news {
+      .news-list {
+         display:flex;
+         flex-flow:row wrap;
+         justify-content: space-between;
+         align-items: flex-start;
+         .news-item {
+            flex: 0 0 49%;
+            width:49%;
+           
+
+            flex-flow:column nowrap;
+
+            .news-item-image,
+            .news-item-data{
+               flex: 0 0 100%;
+               width:100%;
+            }
+
+            .news-item-data {
+               text-align: center;
+               align-items: center;
+            }
          }
       }
    }

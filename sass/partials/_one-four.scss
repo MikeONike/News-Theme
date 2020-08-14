@@ -94,6 +94,39 @@ $news-title: 'Crimson Text';
    }
 }
 
+@media (min-width:450px) {
+   .category-box {
+      .other-news {
+         display:flex;
+         flex-flow:row wrap;
+         justify-content: space-between;
+         align-items: flex-start;
+
+         .news-item {
+            flex-flow:column nowrap;
+            flex: 0 0 49%;
+            width:49%;
+
+            .news-item-image,
+            .news-item-data {
+               flex: 0 0 100%;
+               width: 100%;
+            }
+
+            .news-item-data {
+               text-align: center;
+               align-items:center;
+            }
+         }
+
+         .banner {
+            flex:0 0 49%;
+            width:49%;
+         }
+      }
+   }
+}
+
 @media (min-width:992px) {
    .category-box {
       margin-bottom:4.3rem;
@@ -142,6 +175,7 @@ $news-title: 'Crimson Text';
          
          .news-item {
             flex-flow: column nowrap;
+            margin-bottom: 0;
 
             .news-item-image {
                width:100%;
