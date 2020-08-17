@@ -61,6 +61,7 @@ $news-item-font: 'Crimson Text';
          .news-item-data {
             height: 100%;
             flex: 0 0 100%;
+            padding:1rem 0;
          }
 
          .news-item-title {
@@ -89,7 +90,7 @@ $news-item-font: 'Crimson Text';
    }
 
    .sidebar {
-      padding: 7.5px;
+      padding: 7.5px 0px;
       margin-bottom: 4rem;
 
       .printed-edition {
@@ -213,8 +214,10 @@ $news-item-font: 'Crimson Text';
             justify-content: space-between;
 
             &>* {
-               flex: 0 0 48.5%;
-               width: 48.5%;
+               // flex: 0 0 48.5%;
+               // width: 48.5%;
+               flex:0 0 calc((100% - 15px) / 2);
+               width:calc((100% - 15px) / 2);
             }
          }
       }
@@ -222,7 +225,7 @@ $news-item-font: 'Crimson Text';
       .sidebar {
          min-width: calc(300px + 2 * 7.5px);
          margin-bottom:0;
-         margin-left:2.5rem;
+         margin-left:1.5rem;
 
          .printed-edition {
             text-align: center;

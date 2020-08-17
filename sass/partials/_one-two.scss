@@ -6,11 +6,33 @@
          }
       }
    }
+
    .other-news {
       .news-item {
+         .news-item-title {
+            @include textRestriction(1.7, 1.9, 2);
+         }
+
          .news-item-data {
-            flex:0 0 60%;
-            width:60%;
+            // flex:0 0 100%;
+            // width:100%;
+            flex: 0 0 60%;
+            width: 60%;
+            padding: 0.5rem 1rem;
+         }
+      }
+   }
+}
+
+@media (min-width:450px) {
+   .one-two {
+      .other-news {
+         .news-item {
+            .news-item-data {
+               padding: 0.5rem 0px;
+               flex:0 0 100%;
+               width:100%;
+            }
          }
       }
    }
@@ -26,52 +48,65 @@
             justify-content: space-between;
 
             .sidebar {
-               padding:1rem;
+               padding: 1rem 0px;
                min-width: calc(300px + 2 * 1rem);
+               margin-left: 1rem;
                display: block;
             }
          }
       }
+
       .main-content {
          .row {
             display: flex;
             flex-flow: row nowrap;
             align-items: flex-start;
             justify-content: space-between;
+            // padding:0;
          }
       }
+
       .lead-news {
-         flex:0 0 66.66%;
-         width:66.66%;
-         margin-right:2rem;
+         // flex:0 0 66.66%;
+         // width:66.66%;
+         flex: 0 0 calc((100% - 15px) / 1.6);
+         width: calc((100% - 15px) / 1.6);
+         margin-right: 2rem;
+
          .news-item {
             .news-item-data {
                align-items: flex-start;
+
                .news-item-title {
                   @include textRestriction(2.8, 3.9, 1);
                }
             }
          }
       }
+
       .other-news {
-         flex-flow:column nowrap;
-         flex:1;
-         width:auto;
+         flex-flow: column nowrap;
+         flex: 1;
+         width: 100%;
+
          .news-item {
-            flex:0 0 100%;
-            width:100%;
+            flex: 0 0 100% !important;
+            width: 100% !important;
 
             .news-item-data {
-               flex:0 0 100%;
-               width:100%;
+               flex: 0 0 100%;
+               width: 100%;
+
                .news-item-title {
-                  @include text-fm(2rem, 2.8rem); 
+                  @include text-fm(2rem, 2.8rem);
                   @include textRestriction(2, 2.8, 2);
                }
+
                .news-item-description {
-                  display:none;
+                  display: none;
                }
             }
+
             &:nth-of-type(1n+3) {
                display: none;
             }

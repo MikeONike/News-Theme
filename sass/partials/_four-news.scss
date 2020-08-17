@@ -82,8 +82,10 @@ $description-font: "Crimson Text";
          justify-content: space-between;
          align-items: flex-start;
          .news-item {
-            flex: 0 0 49%;
-            width:49%;
+            // flex: 0 0 49%;
+            // width:49%;
+            flex: 0 0 calc((100% - 10px) / 2);
+            width:calc((100% - 10px) / 2);
            
 
             flex-flow:column nowrap;
@@ -97,6 +99,7 @@ $description-font: "Crimson Text";
             .news-item-data {
                text-align: center;
                align-items: center;
+               padding:5px 0;
             }
          }
       }
@@ -127,8 +130,10 @@ $description-font: "Crimson Text";
 
          .news-item {
             flex-flow: column nowrap;
-            flex:0 0 23.5%;
-            width:23.5%;
+            // flex:0 0 23.5%;
+            // width:23.5%;
+            flex:0 0 calc((100% - 30px) / 4);
+            width:calc((100% - 30px) / 4);
             background-color: $blank;
             position: relative;
             // z-index: 10;
@@ -141,7 +146,7 @@ $description-font: "Crimson Text";
             }
 
             .news-item-data {
-               padding:1rem;
+               padding:5px 0;
                flex: 0 0 100%;
                width: 100%;
                text-align: center;
@@ -172,6 +177,17 @@ $description-font: "Crimson Text";
             }
          }
 
+      }
+   }
+}
+
+@media(min-width:992px) {
+   .four-news {
+      .news-list {
+         .news-item {
+            flex:0 0 calc((100% - 45px) / 4);
+            width:calc((100% - 45px) / 4);
+         }
       }
    }
 }

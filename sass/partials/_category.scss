@@ -14,6 +14,17 @@ $pagin-font: "Roboto";
          .news-item {
             flex: 0 0 100%;
             width: 100%;
+
+            .news-item-meta {
+               margin-bottom: 0.5rem;
+            }
+            .news-item-description {
+               @include textRestriction(1.5, 2.2, 2);
+            }
+
+            .news-item-data {
+               padding:0.5rem 0px;
+            }
          }
       }
 
@@ -174,8 +185,10 @@ $pagin-font: "Roboto";
 
             .news-item:nth-of-type(1n + 3) {
 
-               flex: 0 0 48.5%;
-               width: 48.5%;
+               // flex: 0 0 48.5%;
+               // width: 48.5%;
+               flex: 0 0 calc((100% - 15px) / 2);
+               width: calc((100% - 15px) / 2);
             }
 
          }
@@ -198,14 +211,18 @@ $pagin-font: "Roboto";
          .news-wrapper {
 
             .news-item {
-               flex: 0 0 48.5%;
-               width: 48.5%;
+               // flex: 0 0 48.5%;
+               // width: 48.5%;
+               flex: 0 0 calc((100% - 15px) / 2);
+               width: calc((100% - 15px) / 2);
             }
 
             .news-item:nth-of-type(1n + 3) {
 
-               flex: 0 0 31.5%;
-               width: 31.5%;
+               // flex: 0 0 31.5%;
+               // width: 31.5%;
+               flex: 0 0 calc((100% - 30px) / 3);
+               width: calc((100% - 30px) / 3);
             }
 
          }
