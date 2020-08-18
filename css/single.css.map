@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACG,OADI,CACJ,IAAI,CAAC;EACF,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,WAAW,EAAE,MAAM;CACrB;;AALJ,AAcY,OAdL,CAOJ,aAAa,CACV,eAAe,CACZ,sBAAsB,CAKnB,2BAA2B,CAAC;EACzB,OAAO,EAAE,IAAI;EACb,SAAS,EAAC,aAAa;EACvB,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CACrB;;AAnBb,AAqBY,OArBL,CAOJ,aAAa,CACV,eAAe,CACZ,sBAAsB,CAYnB,oBAAoB,CAAC;EAClB,OAAO,EAAC,IAAI;CACd",
+    "sources": [
+        "../sass/partials/single.scss"
+    ],
+    "names": [],
+    "file": "single.css"
+}

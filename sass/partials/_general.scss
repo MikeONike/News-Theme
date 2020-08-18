@@ -44,6 +44,8 @@ main {
     text-transform: uppercase;
     display: inline-block;
     transition: 0.3s ease;
+    border:none;
+    cursor:pointer;
 }
 
 .btn-primary {

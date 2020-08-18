@@ -465,6 +465,8 @@ main {
   display: inline-block;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -2665,5 +2667,460 @@ main .banner .container > a {
     height: auto;
     margin: 0 auto;
   }
+}
+
+.single .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single .main-content .single-content .single-content-header {
+  margin-bottom: 3.3rem;
+}
+
+.single .main-content .single-content .single-content-header img {
+  margin-bottom: 1.7rem;
+}
+
+.single .main-content .single-content .single-content-header .single-content-header-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.7rem;
+}
+
+.single .main-content .single-content .single-content-header .single-content-meta {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.35px;
+}
+
+.single .main-content .single-content .single-content-header .single-content-meta span,
+.single .main-content .single-content .single-content-header .single-content-meta a {
+  color: #868686;
+}
+
+.single .main-content .single-content .single-content-header .single-content-meta span:first-of-type {
+  margin-right: 1.6rem;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul .fab,
+.single .main-content .single-content .single-content-header .single-content-social ul .fas {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  margin-right: 8px;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul .fab.fa-facebook-f {
+  background-color: #425EAC;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul .fab.fa-twitter {
+  background-color: #1DADEB;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul .fab.fa-google-plus-g {
+  background-color: #DD4B38;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul .fab.fa-pinterest-p {
+  background-color: #D41E1D;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul .fas.fa-share-alt {
+  background-color: #BD252C;
+}
+
+.single .main-content .single-content .single-content-header .single-content-social ul > *:last-child a {
+  margin-right: 0;
+}
+
+.single .main-content .single-content .single-content-header .single-content-header-title {
+  font-family: "Crimson Text";
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 2.7rem;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.single .main-content .single-content .single-content-content p {
+  font-family: "Lato";
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 3.7rem;
+}
+
+.single .main-content .single-content .single-content-content img {
+  margin-bottom: 3.4rem;
+}
+
+.single .main-content .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #F4F4F4;
+  padding: 1.2rem;
+  margin-bottom: 3.3rem;
+}
+
+.single .main-content .tags p {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 1.17px;
+  text-transform: uppercase;
+  margin-right: 1.4rem;
+}
+
+.single .main-content .tags ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single .main-content .tags ul li {
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: 1.08px;
+  margin-right: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.single .main-content .tags ul li a {
+  color: #000;
+  background-color: #fff;
+  padding: 7.6px 8px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.single .main-content .tags ul li a:hover {
+  color: #fff;
+  background-color: #BD252C;
+}
+
+.single .main-content .tags ul li:last-of-type {
+  margin-right: 0;
+}
+
+.single .main-content .additional-news .additional-news-title {
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 1.67px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.single .main-content .additional-news .additional-news-articles {
+  position: relative;
+  padding: 2rem 0;
+  margin-bottom: 3.3rem;
+}
+
+.single .main-content .additional-news .additional-news-articles::after, .single .main-content .additional-news .additional-news-articles::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #BD252C;
+}
+
+.single .main-content .additional-news .additional-news-articles::after {
+  top: 100%;
+  left: 0;
+}
+
+.single .main-content .additional-news .additional-news-articles::before {
+  bottom: 100%;
+  left: 0;
+}
+
+.single .main-content .comments {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.single .main-content .comments .comments-title {
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 1.67px;
+  margin-bottom: 2rem;
+}
+
+.single .main-content .comments .comments-form input,
+.single .main-content .comments .comments-form textarea {
+  font-family: "Lato";
+  background-color: #F4F4F4;
+  border: none;
+  padding: 1.1rem 1.4rem;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: normal;
+  color: #868686;
+  resize: vertical;
+}
+
+.single .main-content .comments .comments-form input::-webkit-input-placeholder,
+.single .main-content .comments .comments-form textarea::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: normal;
+  color: #868686;
+}
+
+.single .main-content .comments .comments-form input:-ms-input-placeholder,
+.single .main-content .comments .comments-form textarea:-ms-input-placeholder {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: normal;
+  color: #868686;
+}
+
+.single .main-content .comments .comments-form input::-ms-input-placeholder,
+.single .main-content .comments .comments-form textarea::-ms-input-placeholder {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: normal;
+  color: #868686;
+}
+
+.single .main-content .comments .comments-form input::placeholder,
+.single .main-content .comments .comments-form textarea::placeholder {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: normal;
+  color: #868686;
+}
+
+.single .main-content .comments .comments-form textarea {
+  min-height: 194px;
+}
+
+.single .main-content .comments .comments-form button.comments-form-submit {
+  margin-bottom: 3rem;
+}
+
+.single .main-content .comments .single-comments .single-comment {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
+}
+
+.single .main-content .comments .single-comments .single-comment .single-comment-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1.8rem;
+}
+
+.single .main-content .comments .single-comments .single-comment .single-comment-header > div:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.single .main-content .comments .single-comments .single-comment .single-comment-title {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: normal;
+  font-family: "Lato";
+  font-weight: 900;
+}
+
+.single .main-content .comments .single-comments .single-comment .single-comment-date {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.35px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #868686;
+}
+
+.single .main-content .comments .single-comments .single-comment .single-comment-btn {
+  color: #BD252C;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 1.33px;
+  background-color: transparent;
+}
+
+.single .main-content .comments .single-comments .single-comment .single-comment-content {
+  color: #494949;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: normal;
+  font-family: "Lato";
+}
+
+.single .main-content .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 4rem;
+}
+
+.single .main-content .pagination .previous,
+.single .main-content .pagination .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.single .main-content .pagination .previous p:first-of-type,
+.single .main-content .pagination .next p:first-of-type {
+  font-family: "Lato";
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.3rem;
+  color: #000;
+}
+
+.single .main-content .pagination .previous p:last-of-type,
+.single .main-content .pagination .next p:last-of-type {
+  font-family: "Crimson Text";
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  letter-spacing: normal;
+  position: relative;
+  padding-left: 1.4rem;
+  color: #000;
+}
+
+.single .main-content .pagination .previous p:last-of-type::after,
+.single .main-content .pagination .next p:last-of-type::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #BD252C;
+}
+
+.single .main-content .pagination .previous:hover,
+.single .main-content .pagination .next:hover {
+  background-color: #ededed;
+}
+
+.single .main-content .pagination .next p:last-of-type::after {
+  background-color: #F4F4F4;
 }
 /*# sourceMappingURL=theme.css.map */
