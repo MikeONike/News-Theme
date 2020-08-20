@@ -99,10 +99,14 @@ $search-iput: 'Roboto';
 
       .toggle-submenu {
          transition: 0.3s ease;
+         position: absolute;
+         right:1rem;
+         top:50%;
+         transform: translateY(-50%);
       }
 
       .arrow-down-up {
-         transform: rotateZ(180deg);
+         transform: translateY(-50%) rotateZ(180deg);
       }
 
       // .arrow-down-down::after {
@@ -144,8 +148,8 @@ $search-iput: 'Roboto';
       }
 
       .sub-menu {
-         // height: 0;
-         // min-height: 0;
+         height: 0;
+         min-height: 0;
          overflow-y: hidden;
 
          li {

@@ -18,12 +18,26 @@ $pagin-font: "Roboto";
             .news-item-meta {
                margin-bottom: 0.5rem;
             }
+
+            .news-item-title {
+               @include text-fm(2.5rem, 3.5rem);
+               @include textRestriction(2.5, 3.5, 2);
+
+            }
+
             .news-item-description {
                @include textRestriction(1.5, 2.2, 2);
             }
 
             .news-item-data {
-               padding:0.5rem 0px;
+               padding: 0.5rem 0px;
+            }
+         }
+
+         &>.news-item:nth-of-type(1n+3) {
+            .news-item-title {
+               @include text-fm(2rem, 2.9rem);
+               @include textRestriction(2, 2.9, 2);
             }
          }
       }
@@ -36,7 +50,7 @@ $pagin-font: "Roboto";
       max-width: 315px;
       // margin-left: auto;
       margin-right: auto;
-      margin-left:2.5rem;
+      margin-left: 2.5rem;
 
       .most-read {
          text-align: center;
@@ -136,7 +150,7 @@ $pagin-font: "Roboto";
             min-width: 36px;
             min-height: 36px;
             text-align: center;
-            
+
             a {
                transition: 0.3s ease;
                color: $void;
@@ -156,9 +170,9 @@ $pagin-font: "Roboto";
                   color: $search-btn;
                   transition: 0.3s ease;
                   width: 100%;
-                  
+
                   &::before {
-                     display:block;
+                     display: block;
                      line-height: 36px;
                   }
 
@@ -196,7 +210,7 @@ $pagin-font: "Roboto";
 
       .sidebar {
          display: none;
-         margin-left:0;
+         margin-left: 0;
 
          .banner {
             display: none;
@@ -215,6 +229,11 @@ $pagin-font: "Roboto";
                // width: 48.5%;
                flex: 0 0 calc((100% - 15px) / 2);
                width: calc((100% - 15px) / 2);
+
+               .news-item-title {
+                  @include text-fm(2.8rem, 3.9rem);
+                  @include textRestriction(2.8, 3.9, 2);
+               }
             }
 
             .news-item:nth-of-type(1n + 3) {
@@ -223,6 +242,11 @@ $pagin-font: "Roboto";
                // width: 31.5%;
                flex: 0 0 calc((100% - 30px) / 3);
                width: calc((100% - 30px) / 3);
+
+               .news-item-title {
+                  @include text-fm(2.3rem, 3.2rem);
+                  @include textRestriction(2.3, 3.2, 2);
+               }
             }
 
          }
@@ -244,6 +268,7 @@ $pagin-font: "Roboto";
    .category {
       .sidebar {
          display: block;
+         margin-left: 1.5rem;
 
          .banner {
             display: block;
@@ -253,11 +278,11 @@ $pagin-font: "Roboto";
       .banner {
          a {
             max-width: 992px;
-            height:auto;
-            margin:0 auto;
+            height: auto;
+            margin: 0 auto;
          }
       }
    }
 
-   
+
 }

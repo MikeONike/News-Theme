@@ -44,10 +44,11 @@ $btn-font: 'Lato';
          border-radius: 25px;
          display: flex;
          justify-content: space-between;
-         align-items: center;
+         align-items: stretch;
       }
 
       input {
+         @include text-fm(1.5rem, 1.8rem);
          flex: 1;
          // width: 70%;
          border-radius: 25px;

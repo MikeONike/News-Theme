@@ -42,8 +42,8 @@
          font-family: $meta-font;
          font-weight: 500;
          @include text-fm(1.4rem, 1.6rem, 0.35px);
-         // margin-bottom: 1.3rem;
-         margin-bottom: 0;
+         margin-bottom: 0.5rem;
+         // margin-bottom: 0;
 
          span,
          a {

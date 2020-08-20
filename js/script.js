@@ -42,12 +42,37 @@ $(document).ready(() => {
    //    }
    // })
 
-   $('header').on('click', '.toggle-submenu', function () {
+   ////////////////////////
 
-      $(this).toggleClass('arrow-down-up');
+   // $('header').on('click', '.toggle-submenu', function () {
 
-      $(this).parent().next().slideToggle()
-   })
+   //    $(this).toggleClass('arrow-down-up');
+
+   //    $(this).parent().next().slideToggle()
+   // })
+
+   ////////////////////////
+
+   $('.header-nav .toggle-submenu').on('click', (e) => {
+
+      var target = $(e.target).parent().parent().children('ul');
+
+      $(e.target).toggleClass('arrow-down-up');
+
+      if (target.height() == 0) {
+         if (target.parent().parent('.sub-menu').length > 0) {
+            target.parent().parent('.sub-menu').css('min-height', `${target[0].scrollHeight +  target.parent().parent('.sub-menu')[0].scrollHeight}px`);
+         } else {
+            target.parent().parent('.sub-menu').css('min-height', `${target[0].scrollHeight}px`);
+         }
+         target.css('min-height', `${target[0].scrollHeight}px`);
+      } else {
+         target.parent().parent('.sub-menu').css('min-height', `${target[0].scrollHeight}px`);
+         target.css('min-height', `0px`);
+      }
+
+   });
+
 
    //////////////////////////////////////
    // show / hide menu on click
@@ -87,14 +112,14 @@ $(document).ready(() => {
    // remove span arrow on desktop
    //////////////////////////////////////
 
-   if($(window).outerWidth() >= 992) {
+   if ($(window).outerWidth() >= 992) {
       $('.toggle-submenu').css('display', 'none')
    } else {
       $('.toggle-submenu').css('display', 'inline')
    }
 
    $(window).on('resize', () => {
-      if($(window).outerWidth() >= 992) {
+      if ($(window).outerWidth() >= 992) {
          $('.toggle-submenu').css('display', 'none')
       } else {
          $('.toggle-submenu').css('display', 'inline')
@@ -108,7 +133,7 @@ $(document).ready(() => {
    var bottomHeaderPos = $('.bottom-header').offset().top;
    var containerWidth = $('.container').outerWidth();
 
-   if($(window).outerWidth() < 992) {
+   if ($(window).outerWidth() < 992) {
       $('.top-header').css('display', 'none');
    }
 
@@ -120,14 +145,16 @@ $(document).ready(() => {
    $(window).on("scroll resize", () => {
       if ($(window).outerWidth() >= 992) {
          if ($(this).scrollTop() >= bottomHeaderPos) {
-            $('.bottom-header').css({
+            // $('.bottom-header').scrollTop(0);
+            $('.header').css({
                'position': 'fixed',
-               'width': `${containerWidth}px`
+               'width': '100%'
+               // 'width': `${containerWidth}px`
             });
             $('.top-header').css('display', 'none');
             $('main').css('margin-top', '180px');
          } else {
-            $('.bottom-header').css({
+            $('.header').css({
                'position': 'relative',
                'width': 'auto'
             });
@@ -136,12 +163,33 @@ $(document).ready(() => {
          }
       } else {
          $('.top-header').css('display', 'none');
-         $('.bottom-header').css({
-            'width': 'auto',
-            'position': 'relative'
+         $('.header').css({
+            // 'width': 'auto',
+            // 'position': 'relative'
          });
          $('main').css('margin-top', '60px');
       }
+   })
+
+   //////////////////////////////
+
+   function setLiBottomMargin() {
+      if ($(window).outerWidth() >= 576) {
+
+         var ulOffsetTop = $('.footer .footer-top .footer-menu > ul').offset().top + $('.footer .footer-top .footer-menu > ul').height();
+         var liOffsettop = $('.footer .footer-top .footer-menu > ul li:nth-of-type(5)').offset().top + $('.footer .footer-top .footer-menu > ul li:nth-of-type(5)').height();
+
+         console.log(ulOffsetTop, liOffsettop);
+         $('.footer .footer-top .footer-menu > ul li:nth-of-type(5)').css('margin-bottom', `${ulOffsetTop - liOffsettop}px`);
+      } else {
+         $('.footer .footer-top .footer-menu > ul li:nth-of-type(5)').css('margin-bottom', '0px');
+      }
+   }
+
+   setLiBottomMargin();
+
+   $(window).resize(() => {
+      setLiBottomMargin();
    })
 
 
@@ -150,7 +198,7 @@ $(document).ready(() => {
    /////////////////////
 
    $(".owl-carousel").owlCarousel({
-      'items' : 1,
+      'items': 1,
       'loop': true,
       'autoplay': true,
       'autoplayTimeout': 8000,

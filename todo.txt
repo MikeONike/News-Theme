@@ -1,9 +1,0 @@
-1. set news-item-description max-height in category page.
-
-////////////////////////////////////////////////////////////
-
-      ///// SINGLE /////
-
-1. change font-size / line-height on breakpoints
-
-2. add padding to all sections
